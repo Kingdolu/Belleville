@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleville dental</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--header-->
+    <header class="heading">
+       <!---- <div class="visitor-counter">
+            <div class="visitor-count">Visitors: <span id="visitor-count">0</span></div>
+        </div>-->
+        <div class="logo">
+            <img src="./assets/Group2.png" alt="Belleville dental logo"/>
+        </div>
+      
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button> 
+
+        <nav class="navbar" id="navbar">
+            <a href="#menu">SERVICES ▾</a>
+            <a href="#contact">ABOUT US ▾</a>
+            <a href="#reservation">PRODUCTS</a>
+            <a href="#reservation">CONTACT US</a>
+          <button a href="#reservation" class="imgbt">BOOK NOW</button>
+        </nav>
+    </header>
+    <!--end-->
+
+    <!-- Hero Section -->
+    <div class="video-container">
+        <!-- Dark overlay div -->
+        <div class="video-overlay"></div>
+      
+        <!-- Video element -->
+        <video autoplay muted loop playsinline>
+          <source src="./assets/02.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      
+        <!-- Text Overlay -->
+        <div class="imagery">
+            <p> Premier Belleville Dentist</p>
+            <h1>Redefining your dental<br />care experience </h1>
+            <a href="#reservation" class="imgbtn">BOOK NOW</a>
+          </div>
+      </div>
+      
+      
+  <!--end-->
+
+  <!--Welcome-->
+  <section class="minella-section">
+    <div class="flex-container">
+      <div class="image-container">
+        <img src="./assets/beehive.jpg" alt="Minella's To Go" />
+      </div>
+  
+    <div class="content-container">
+        <h4 class="subheading">BEST VALUE TO-GO MEALS</h4>
+        <h1 class="main-heading">Family-sized Chicken Dinners To Go (serves 4+)</h1>
+  
+        <p class="section-title">Your choice:</p>
+        <ul>
+            <li>Chicken Marsala</li>  
+            <li>Chicken Parmigiana</li>
+            <li>Chicken Francese</li>
+        </ul>
+        
+        <p class="section-title">Comes with:</p>
+        <ul>
+            <li>Penne pasta</li>
+            <li>House salad</li>
+            <li>Our famous dinner rolls</li>
+            <li>Dessert baked on premises</li>
+        </ul>
+  
+        <p><strong>Curbside Pick-up or Delivery</strong></p>
+        <p><strong>All for $49.50</strong></p>
+  
+        <a href="tel:6106871575" class="call-button" id="Reservation">Call 610-687-1575</a>
+      </div>
+    </div>
+  </section>
+  <!--end-->
+
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      const hamburger = document.getElementById('hamburger');
+  
+      navbar.classList.toggle('active');
+  
+      // Change icon
+      if (navbar.classList.contains('active')) {
+        hamburger.textContent = '✖';
+      } else {
+        hamburger.textContent = '☰';
+      }
+    }
+  
+    // Optional: close menu when link is clicked
+    document.querySelectorAll('.navbar a, .navbar button').forEach(item => {
+      item.addEventListener('click', () => {
+        const navbar = document.getElementById('navbar');
+        const hamburger = document.getElementById('hamburger');
+        navbar.classList.remove('active');
+        hamburger.textContent = '☰';
+      });
+    });
+  </script>
+  <!---- <footer>
+    <marquee id="ticker">Loading date, time, and location...</marquee>
+  </footer>-->
+
+  <script src="script.js"></script>
+  
+  
+</body>
+</html>
